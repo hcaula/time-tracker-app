@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import '../css/App.css';
 import Logo from './Logo'
+import GoogleLoginBtn from './GoogleLoginBtn'
+import '../css/Index.css';
+import 'semantic-ui-react-css/semantic.min.css';
 
 class Index extends Component {
   render() {
