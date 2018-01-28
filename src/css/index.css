@@ -1,46 +1,28 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#root{
-  height: 100%;
-  width: 100%;
-}
-
-.Container{
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-.Container.centered.column{
-  justify-content: center;
-}
-
-.Container.centered.row{
-  align-items: center;
-}
-
-.Container.centered.both{
-  align-items: center;
-  justify-content: center;
-}
-
-.Container.rowDirection{
-  flex-direction: row;
-}
-
-.Container.columnDirection{
-  flex-direction: column;
+html, body{
+  background-color: #e0e0e0;
 }
 
 .Logo{
-  width: 50%;
+  width: 80%;
+}
+
+.Line{
+  width: 35%;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 20px 0px 50px 0px;
+}
+
+.Bar{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 720px){
+  .Logo{
+    width: 50%;
+  }
 }
