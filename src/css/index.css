@@ -13,6 +13,15 @@ html, body{
   margin: 20px 0px 50px 0px;
 }
 
+.GoogleIcon{
+  color: white;
+}
+
+.LoginWithGoogle{
+  color: white;
+  font-family: 'Lato'
+}
+
 .Bar{
   width: 100%;
   height: 50px;

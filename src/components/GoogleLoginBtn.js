@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { Button, Icon } from 'semantic-ui-react'
-import { config } from '../config'
-import rp from 'request-promise'
-
+import React, { Component } from 'react'; 
+import { Icon } from 'semantic-ui-react'
+import GoogleLogin from 'react-google-login';
 class GoogleLoginBtn extends Component {
   
-  login(e){
-    var request = {
-      uri: config.api_url + '/login',
-      method: 'GET'
-    }
-
-    rp(request).then(() => console.log("Alright!")).catch((err) => console.log(err));
+  responseGoogle(response){
+    console.log(response);
   }
 
   render() {
     return (
-      <Button onClick={this.login} color='google plus'><Icon name='google'></Icon>Sign in with Google</Button>
+        <GoogleLogin
+        clientId="766044722529-hnq5ohm4o3f4jclfs3dq6plgt3ad7nmk.apps.googleusercontent.com"
+        responseType="code"
+        onSuccess={this.responseGoogle}
+        onFailure={this.responseGoogle}>
+        <Icon className="GoogleIcon" name="google"/>
+        <span className="LoginWithGoogle"> Login with Google</span>
+        </GoogleLogin>
     );
   }
 }
